@@ -23,7 +23,7 @@
 1. 安装 npm 包
 
 ```bash
-  npm install -D eslint
+npm install -D eslint
 ```
 
 2. vscode 安装 ESlint 插件
@@ -33,7 +33,7 @@
 3. 配置 Eslint 文件
 
 ```js
-  npm init @eslint/config
+npm init @eslint/config
 ```
 
 ```js
@@ -53,9 +53,10 @@ Which framework does your project use? …    // 项目使用的框架
 Does your project use TypeScript     // 是否使用了 ts
 
 // 代码运行在哪
+// 注意此处应该多选，因为项目也运行在node上
 Where does your code run? …  (Press space to select, a to toggle all, i to invert selection)
-✔ Browser
-✔ Node
+√ Browser
+√ Node
 
 What format do you want your config file to be in? ...  //配置文件的类型
 √ JavaScript
@@ -68,11 +69,11 @@ What format do you want your config file to be in? ...  //配置文件的类型
 5. 创建 .eslintignore 文件
 
 ```js
-  node_modules/
-  dist/
+node_modules/
+dist/
 
-  // # Ignore all HTML files:
-  // *.html
+// # Ignore all HTML files:
+// *.html
 ```
 
 ## prettier
@@ -80,7 +81,7 @@ What format do you want your config file to be in? ...  //配置文件的类型
 1. 安装 npm 包
 
 ```bash
-  npm install -D prettier
+npm install -D prettier
 ```
 
 2. vscode 安装 Prettier 插件
@@ -90,7 +91,7 @@ What format do you want your config file to be in? ...  //配置文件的类型
 3. 因为 eslint 和 prettier 有样式统一的冲突，所以需要下载插件解决冲突
 
 ```js
-  npm i prettier eslint-config-prettier eslint-plugin-prettier -D
+npm i prettier eslint-config-prettier eslint-plugin-prettier -D
 ```
 
 .eslintrc 配置文件，在 "extend" 下最后一行添加 prettier
@@ -105,11 +106,11 @@ What format do you want your config file to be in? ...  //配置文件的类型
 4. 创建 .prettierignore 文件
 
 ```js
-  node_modules/
-  dist/
+node_modules/
+dist/
 
-  // # Ignore all HTML files:
-  // *.html
+// # Ignore all HTML files:
+// *.html
 ```
 
 5. 创建 .prettierrc.js 文件
@@ -187,39 +188,41 @@ module.exports = {
 1. 安装
 
 ```bash
-  npx mrm@2 lint-staged
+npx mrm@2 lint-staged
 ```
 
-2. 修改 `package.json` 文件如下
+2. 修改 `package.json` 文件，以遵循你自己的规范，例如
 
 ```json
-  "lint-staged": {
-      "*": ["eslint --cache --fix", "prettier --write"]
-  }
+"lint-staged": {
+  "*": ["eslint --cache --fix", "prettier --write"]
+}
 ```
 
 3. 如果需要控制 lint 和 prettier 的并发数，需要在 `.husky` 的 `pre-commit` 中修改语句
 
 ```bash
-  npx lint-staged --concurrent false
+npx lint-staged --concurrent false
 ```
 
 ::: tip
 此情况在 eslint 和 prettier 可能同时作用在同一文件时有用
 :::
 
+自定义配置看文档。
+
 ## commitlint
 
 1. 安装
 
 ```bash
-  npm install -D @commitlint/config-conventional @commitlint/cli
+npm install -D @commitlint/config-conventional @commitlint/cli
 ```
 
 2. 为 husky 启用 `commit-msg` 钩子
 
 ```bash
-  npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"
+npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"
 ```
 
 3. 提交规范
@@ -227,29 +230,29 @@ module.exports = {
 类似于以下格式
 
 ```js
-  type(scope?): subject
+type(scope?): subject
 
-  //例
-  chore: run tests on travis ci
-  fix(server): send cors headers
-  feat(blog): add comment section
+//例
+chore: run tests on travis ci
+fix(server): send cors headers
+feat(blog): add comment section
 ```
 
 常用的 commit 规范类型有
 
 ```js
-  "build", // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
-  "feat", // 新功能
-  "fix", // 修补bug
-  "docs", // 文档修改
-  "style", // 代码格式修改, 注意不是 css 修改
-  "refactor", // 重构
-  "perf", // 优化相关，比如提升性能、体验
-  "test", // 测试用例修改
-  "revert", // 代码回滚
-  "ci", // 持续集成修改
-  "config", // 配置修改
-  "chore", // 其他改动
+"build", // 编译相关的修改，例如发布版本、对项目构建或者依赖的改动
+"feat", // 新功能
+"fix", // 修补bug
+"docs", // 文档修改
+"style", // 代码格式修改, 注意不是 css 修改
+"refactor", // 重构
+"perf", // 优化相关，比如提升性能、体验
+"test", // 测试用例修改
+"revert", // 代码回滚
+"ci", // 持续集成修改
+"config", // 配置修改
+"chore", // 其他改动
 ```
 
 4. 配置 `commitlint.config.js` 文件

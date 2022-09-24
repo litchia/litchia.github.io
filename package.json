@@ -1,22 +1,22 @@
 {
-  "name": "ibook",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitee.com/mahao1234/ibook.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vitepress": "^1.0.0-alpha.8",
-    "vue": "^3.2.37"
-  }
+    "name": "ibook",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:serve": "vitepress serve docs",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitee.com/mahao1234/ibook.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "vitepress": "^1.0.0-alpha.8",
+        "vue": "^3.2.37"
+    }
 }

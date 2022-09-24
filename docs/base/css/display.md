@@ -22,8 +22,8 @@
 
 ::: tip 常用场景
 
- 1. vue模板template，充当无语义包裹框;
- 2. 消除默认样式，比如 button 不使用默认样式。
+1.  vue 模板 template，充当无语义包裹框;
+2.  消除默认样式，比如 button 不使用默认样式。
 
 :::
 
@@ -47,18 +47,16 @@
 
 表格样式
 
-``` js
-
- display: table                  //table
- display: table-header-group     //thead
- display: table-caption          //caption 表格标题
- display: table-row-group        //tbody
- display: table-row              //tr
- display: table-column-group     //colgroup 列分组
- display: table-column           //col
- display: table-cell             //td 和 th 单元格
- display: table-footer-group     //tfoot
-
+```js
+display: table; //table
+display: table - header - group; //thead
+display: table - caption; //caption 表格标题
+display: table - row - group; //tbody
+display: table - row; //tr
+display: table - column - group; //colgroup 列分组
+display: table - column; //col
+display: table - cell; //td 和 th 单元格
+display: table - footer - group; //tfoot
 ```
 
 ## inline-table
@@ -71,6 +69,6 @@
 
 ::: tip
 
- 可以根据 ` list-style ` 设置列表样式
+可以根据 `list-style` 设置列表样式
 
 :::

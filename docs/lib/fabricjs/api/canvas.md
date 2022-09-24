@@ -1,60 +1,59 @@
 ---
-title: 'Fabric.Canvas'
-next: 'object | Fabric'
+title: "Fabric.Canvas"
+next: "object | Fabric"
 ---
 
 # Canvas
 
 ## 触发事件 (Fire Event)
 
-``` js
- object:rotating  // 控制器：旋转
- object:scaling  // 控制器：放缩
- object:moving  // 拖拽：移动
- object:skewing  // 控制器：歪斜
- object:modified  // transform操作结束后，或者statefull为true的任何改变
- before:transform  // transform操作前
+```js
+object: rotating; // 控制器：旋转
+object: scaling; // 控制器：放缩
+object: moving; // 拖拽：移动
+object: skewing; // 控制器：歪斜
+object: modified; // transform操作结束后，或者statefull为true的任何改变
+before: transform; // transform操作前
 
- path:created  // 绘画操作结束，并且路径被添加到画布
+path: created; // 绘画操作结束，并且路径被添加到画布
 
- selection:created  // 选区创建
- selection:updated  // 选区更改
- before:selection:cleared  // 组合取消之前
- selection:cleared  // 选区取消
+selection: created; // 选区创建
+selection: updated; // 选区更改
+before: selection: cleared; // 组合取消之前
+selection: cleared; // 选区取消
 
- mouse:down
- mouse:move
- mouse:up
- mouse:down:before  // 鼠标点击之前的事件
- mouse:move:before  // 鼠标移动之前的事件
- mouse:up:before  // 鼠标松开之前的事件
- mouse:over  // 鼠标进入canvas
- mouse:out  // 鼠标离开canvas
- mouse:dblclick  // canvas上的双击
+mouse: down;
+mouse: move;
+mouse: up;
+mouse: down: before; // 鼠标点击之前的事件
+mouse: move: before; // 鼠标移动之前的事件
+mouse: up: before; // 鼠标松开之前的事件
+mouse: over; // 鼠标进入canvas
+mouse: out; // 鼠标离开canvas
+mouse: dblclick; // canvas上的双击
 
- event:dragenter  // 拖动进入
- event:dragover  // 拖动经过
- event:dragleave  // 拖动离开
- drop:before  // 拖动释放之前
- event:drop  // 拖动释放
-
+event: dragenter; // 拖动进入
+event: dragover; // 拖动经过
+event: dragleave; // 拖动离开
+drop: before; // 拖动释放之前
+event: drop; // 拖动释放
 ```
 
 ## 继承事件 (Extend StaticCanvas)
 
-``` js
- object:added  // 对象被添加
- object:removed  // 对象被删除
- 
- canvas:cleared  // 画布被清空
+```js
+object: added; // 对象被添加
+object: removed; // 对象被删除
 
- after:render  // 渲染结束
- before:render  // 渲染之前
+canvas: cleared; // 画布被清空
+
+after: render; // 渲染结束
+before: render; // 渲染之前
 ```
 
 ## 成员 (Member)
 
-``` js
+```js
  allowTouchScrolling: Boolean  // 当使用触摸屏，并且在canvas上拖拽时，浏览器是否可以滚动
 
  altActionKey: null|String  ('shiftKey')  // 替代对角值操作的按键： 'altKey', 'shiftKey', 'ctrlKey'。如果为 'null', 'none' 或其他字符串则禁用该功能
@@ -63,7 +62,7 @@ next: 'object | Fabric'
 
  backgroundColor: String|fabric.Pattern  // canvas背景颜色
 
- backgroundImage: fabric.Image  // canvas背景图片，需要通过fabric.StaticCanvas的setBackgroundColor()函数来设置 
+ backgroundImage: fabric.Image  // canvas背景图片，需要通过fabric.StaticCanvas的setBackgroundColor()函数来设置
 
  backgroundVpt: Boolean  (true)  // 如果设置为 false ，backgroundImage不受窗口变化的影响
 
@@ -86,7 +85,7 @@ next: 'object | Fabric'
  enableRetinaScaling: Boolean  (true)  // 画布按 devicePixelRatio 缩放，以便在视网膜屏幕上更好地呈现
 
  fireMiddleClick: Boolean  // canvas 是否可鼠标中击
- 
+
  fireRightClick: Boolean  // canvas 是否可右击
 
  freeDrawingCursor: String  ('crosshair')  // 鼠标样式: 自由绘画
@@ -142,7 +141,7 @@ next: 'object | Fabric'
  stateful: Boolean  // 对象的状态是否会被保存
 
  stopContextMenu: Boolean  // 是否禁用右击菜单
- 
+
  svgViewportTransformation: Boolean  (true)  // 如果为 true，getSvgTransform()将会把 StaticCanvas 的 viewportTransform 应用到svg变换上，一个缩放的画布将会输出一个缩放的svg。
 
  targetFindTolerance: Number
@@ -161,7 +160,7 @@ next: 'object | Fabric'
 
 ## 方法 (Methods)
 
-``` js
+```js
  initialize(el, optionsopt) → {Object}  // 构造函数
 
  __onMouseWheel(e)  // 鼠标滚轮方法
@@ -179,7 +178,7 @@ next: 'object | Fabric'
  absolutePan(point) → {fabric.Canvas}  // 平移视窗，为了将点放置在画布的左上角
 
  add(…object) → {Self}  // 将对象添加到集合、画布或组，然后渲染画布（如果 renderOnAddRemove 不是 false）。在组的情况下，不会对边界框进行更改。对象应该是fabric.Object 的实例（或继承自fabric.Object），强烈建议组不要使用此函数。您可以使用 add 方法添加一堆对象，但是您需要为 Group 类运行 addWithUpdate 调用。否则position/bbox 将是错误的
- 
+
  bringForward(object, intersectingopt) → {fabric.Canvas}  // 如果某对象和另外一个对象有交集，设置 intersecting 为true可以提升该对象的层级让他处于上面
 
  bringToFront(object) → {fabric.Canvas}  // 将某对象移到最顶层
@@ -203,7 +202,7 @@ next: 'object | Fabric'
   * properties: canvas克隆时保留哪些属性
   */
  clone(callbackopt, propertiesopt)  // 克隆 canvas 实例
- 
+
  cloneWithoutData(callbackopt)  // 克隆 canvas 实例而不克隆现有数据。这实际上复制了画布尺寸、剪辑属性等，但将数据留空（以便您可以使用自己的数据填充）
 
  complexity() → {Number}  // 返回 集合复杂度
@@ -280,7 +279,7 @@ next: 'object | Fabric'
  getSelectionElement() → {HTMLCanvasElement}  // 选区的 canvas 元素Element
 
  getVpCenter() → {fabric.Point}  // 计算画布中与实际视口中心相对应的点。
- 
+
  getZoom() → {Number}  // 获取 zoom 缩放等级
 
  /**
@@ -329,7 +328,7 @@ next: 'object | Fabric'
   * e: 在执行 "object:selected " 时传递
   */
  setActiveObject(object, eopt) → {fabric.Canvas}  // 设置活跃对象
- 
+
   /**
   * callback: （ canvas.renderAll.bind(canvas) ）
   */
@@ -341,7 +340,7 @@ next: 'object | Fabric'
 
   /**
   * dimensions: { width，height } 如果 cssOnly 为 true，需要加上 px/%/em
-  * options: { 
+  * options: {
   *            backstoreOnly:Boolean    将 dimensions 作为 canvas 后备尺寸
   *            cssOnly:Boolean   将 dimensions 作为 css 尺寸
   *          }
@@ -353,7 +352,7 @@ next: 'object | Fabric'
  setWidth(value, optionsopt) → {fabric.Canvas}  // canvas 宽度设置
 
  setOverlayColor(overlayColor, callback) → {fabric.Canvas}  // 设置 canvas 的上层覆盖色
- 
+
  setOverlayImage(image, callback, optionsopt) → {fabric.Canvas}  // 设置 canvas 的上层覆盖图形
 
  setViewportTransform(vpt) → {fabric.Canvas}  // 设置 canvas 的视口转换
@@ -363,7 +362,7 @@ next: 'object | Fabric'
  size() → {Number}  // 获取集合的大小，即包含多少对象
 
  straightenObject(object) → {fabric.Canvas}  // 使某个对象变正变直
- 
+
   /**
   * multiplier: 缩放系数
   * cropping: { left，top，width，height }

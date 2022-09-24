@@ -5,11 +5,11 @@
 https://code.visualstudio.com/
 
 参考：
-    [vscode-plugin]
+
+-   [vscode plugin](./vscode/plugin.md)
 
 ## 安装 git
 
 https://git-scm.com/
-
 
 ## 安装

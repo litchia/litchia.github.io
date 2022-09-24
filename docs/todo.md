@@ -1,8 +1,7 @@
 ## 微前端
 
- qiankun
+qiankun
 
 ## 跨端
 
- react native  /   flutter
- 
+react native / flutter

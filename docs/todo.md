@@ -1,3 +1,5 @@
+node、webpack、ts。。。
+
 ## 微前端
 
 qiankun

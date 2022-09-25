@@ -1,6 +1,7 @@
 # 插件介绍
 
 -   [eslint：代码质量校验](https://eslint.org/)
+-   [stylelint：css 校验](https://stylelint.io/user-guide/get-started)
 -   [prettier：代码风格统一](https://prettier.io/)
 -   [husky: git hooks (代码提交前全部校验)](https://typicode.github.io/husky/#/)
 -   [lint-staged: git hooks (校验 git add 暂存区文件)](https://github.com/okonet/lint-staged)
@@ -20,7 +21,7 @@
 
 ## eslint
 
-1. 安装 npm 包
+1. 安装
 
 ```bash
 npm install -D eslint
@@ -76,9 +77,19 @@ dist/
 // *.html
 ```
 
+## stylelint
+
+<!-- 1. 安装 stylelint 和标准配置
+
+```bash
+npm install -D stylelint stylelint-config-standard
+```
+
+2. 在项目的根目录中创建一个配置文件 .stylelintrc.js -->
+
 ## prettier
 
-1. 安装 npm 包
+1. 安装
 
 ```bash
 npm install -D prettier
@@ -195,7 +206,10 @@ npx mrm@2 lint-staged
 
 ```json
 "lint-staged": {
-  "*": ["eslint --cache --fix", "prettier --write"]
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+        "eslint --cache --fix --cache-location ./node_modules/.cache/.eslintcache"
+    ],
+    "*": "prettier --write --ignore-unknown"
 }
 ```
 

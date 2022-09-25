@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as n}from"./app.9d117918.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"interview/js/on.md"}'),o={name:"interview/js/on.md"};function r(a,s,c,i,p,_){return n(),t("div")}const f=e(o,[["render",r]]);export{m as __pageData,f as default};

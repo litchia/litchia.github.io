@@ -27,6 +27,7 @@ export default {
             },
             { text: "面试题", link: "/interview/js/on" },
             { text: "常见问题记录", link: "/solution/" },
+            { text: "好玩的", link: "/goodjob/svg/intro" },
             { text: "接下来...", link: "/todo" },
         ],
         sidebar: {
@@ -90,6 +91,16 @@ export default {
                     items: [
                         { text: "面试", link: "/interview/js/on" },
                         { text: "笔试", link: "/interview/js/off" },
+                    ],
+                },
+            ],
+            "/goodjob/": [
+                {
+                    text: "svg",
+                    collapsible: true,
+                    items: [
+                        { text: "介绍", link: "/goodjob/svg/intro" },
+                        { text: "例子", link: "/goodjob/svg/demo" },
                     ],
                 },
             ],

@@ -57,9 +57,13 @@ export default {
                     ],
                 },
                 {
-                    text: "脚手架搭建",
+                    text: "框架搭建",
                     collapsible: true,
                     items: [
+                        {
+                            text: "vue3 + vite",
+                            link: "/startup/cli/vue3.md",
+                        },
                         {
                             text: "代码规范",
                             link: "/startup/cli/formatter",

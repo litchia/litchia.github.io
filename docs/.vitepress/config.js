@@ -26,6 +26,7 @@ export default {
                 ],
             },
             { text: "面试题", link: "/interview/js/on" },
+            { text: "运维", link: "/ops/verdaccio" },
             { text: "常见问题记录", link: "/solution/" },
             { text: "好玩的", link: "/goodjob/svg/intro" },
             { text: "接下来...", link: "/todo" },
@@ -96,6 +97,11 @@ export default {
                         { text: "面试", link: "/interview/js/on" },
                         { text: "笔试", link: "/interview/js/off" },
                     ],
+                },
+            ],
+            "/ops/": [
+                {
+                    items: [{ text: "verdaccio", link: "/ops/verdaccio" }],
                 },
             ],
             "/goodjob/": [
